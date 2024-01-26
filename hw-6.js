@@ -11,9 +11,6 @@ switch (numOrStr){
     case 'isNaN(+numOrStr )':
         console.log('number is Ba_NaN');
         break;
-    case '':
-        console.log('number is Ba_NaN');
-        break;
     default:
         console.log('OK!');
 }
