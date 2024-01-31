@@ -117,3 +117,21 @@ console.log('end 9');
 
 // 10
 
+let maxValue = 0;
+
+for(let i = 0; i < arr.length; i++){
+    if (maxValue < arr[i]){
+        maxValue = arr[i];
+    }
+}
+console.log(maxValue);
+
+for (let i = 0; i < arr.length; i++){
+    if (arr [i] !== maxValue){
+        arr [i] = 0;
+    }
+}
+
+console.log(arr);
+
+console.log('end 10');
