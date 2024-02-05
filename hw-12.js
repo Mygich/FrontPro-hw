@@ -1,14 +1,11 @@
-let number = +prompt('put a number');
-let degree = +prompt('put a degree');
 
-function equation(number, degree){
+function pow (number, degree){
     if (degree === 0) {
         return 1;
     } else {
-        return number * equation(number, degree- 1);
+        return number * pow (number, degree- 1);
     }
 }
 
-let result = equation(number, degree);
-console.log(result);
-
+console.log(pow(16, 5));
+console.log(pow(5, 2));
