@@ -87,6 +87,8 @@ const arrayThird = fillArray(rows, columns);
 
 console.log(arrayThird);
 
+console.log('end 3');
+
 // 4
 
 function removeLetters(string, lettersToRemove) {
@@ -100,3 +102,5 @@ const lettersToRemove = prompt('Яку літеру видалити із "Hello
 const filteredString = removeLetters(string, lettersToRemove);
 
 alert(`${filteredString}`)
+
+console.log('end 4');
