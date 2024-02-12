@@ -65,3 +65,38 @@ alert(`${result2}`);
 console.log('end 2');
 
 // 3
+
+function fillArray(rows, columns) {
+    const arrayThird = new Array(rows);
+    for (let i = 0; i < rows; i++) {
+        arrayThird[i] = new Array(columns);
+    }
+
+    for (let i = 0; i < rows; i++) {
+        for (let c = 0; c < columns; c++) {
+            arrayThird[i][c] = prompt(`Введіть значення для рядка ${i + 1}, стовпця ${c + 1}:`);
+        }
+    }
+
+    return arrayThird;
+}
+
+const rows = parseInt(prompt("Введіть кількість рядків:"));
+const columns = parseInt(prompt("Введіть кількість стовпчиків:"));
+const arrayThird = fillArray(rows, columns);
+
+console.log(arrayThird);
+
+// 4
+
+function removeLetters(string, lettersToRemove) {
+    const stringArr = string.split('');
+    const filteredArr = stringArr.filter(char => !lettersToRemove.includes(char));
+    const filteredString = filteredArr.join('');
+    return filteredString;
+}
+const string = "Hello, world!";
+const lettersToRemove = prompt('Яку літеру видалити із "Hello, world!"?');
+const filteredString = removeLetters(string, lettersToRemove);
+
+alert(`${filteredString}`)
