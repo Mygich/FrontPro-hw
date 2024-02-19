@@ -14,3 +14,28 @@ function generate() {
     const outputElement = document.getElementById("output");
     outputElement.textContent = lines.join(", ");
 }
+
+// 2
+
+function validate() {
+
+    const numberInput = document.getElementById("number-input");
+    const number = +(numberInput.value);
+
+    // Перевірка, чи є число 5-значним
+    if (isNaN(number) || number.toString().length !== 5) {
+        const outputElement = document.getElementById("output");
+        outputElement.textContent = "Введіть 5-значне число!";
+        return;
+    }
+
+    // Розбиття числа на цифри
+    const digits = number.toString().split("");
+
+    // Перемішуємо рядки
+    digits.sort(() => Math.random() - 0.5);
+
+    // Виведення цифр через пробіл
+    const outputElement = document.getElementById("output-numbers");
+    outputElement.textContent = digits.join(" ");
+}
